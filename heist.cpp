@@ -38,3 +38,27 @@ void Location::displayDetails() const {
     }
     cout << endl;
 }
+
+Suspect::Suspect() : Entity(), alibi("None"), hiddenLetter('_'), letterPosition(0), isCulprit(false) {}
+
+Suspect::Suspect(const string& name, const string& desc, const string& alibi)
+    : Entity(name, desc), alibi(alibi), hiddenLetter('_'), letterPosition(0), isCulprit(false) {}
+
+void Suspect::setClue(char letter, int pos) {
+    hiddenLetter = letter;
+    letterPosition = pos;
+}
+
+void Suspect::setCulprit(bool culprit) { isCulprit = culprit; }
+bool Suspect::getCulprit() const { return isCulprit; }
+string Suspect::getAlibi() const { return alibi; }
+char Suspect::getHiddenLetter() const { return hiddenLetter; }
+int Suspect::getLetterPosition() const { return letterPosition; }
+
+void Suspect::displayDetails() const {
+    cout << "[Suspect] " << name << " (" << description << ")";
+    if (inspected) {
+        cout << " - Alibi: \"" << alibi << "\" | Clue: '" << hiddenLetter << "' at Pos " << letterPosition;
+    }
+    cout << endl;
+}

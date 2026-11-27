@@ -60,4 +60,25 @@ public:
     void displayDetails() const override;
 };
 
+class Suspect : public Entity {
+private:
+    string alibi;
+    char hiddenLetter;
+    int letterPosition;
+    bool isCulprit;
+
+public:
+    Suspect();
+    Suspect(const string& name, const string& desc, const string& alibi);
+
+    void setClue(char letter, int pos);
+    void setCulprit(bool culprit);
+    bool getCulprit() const;
+    string getAlibi() const;
+    char getHiddenLetter() const;
+    int getLetterPosition() const;
+
+    void displayDetails() const override;
+};
+
 #endif
