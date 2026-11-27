@@ -44,4 +44,20 @@ public:
     virtual void displayDetails() const = 0;
 };
 
+class Location : public Entity {
+private:
+    char hiddenLetter;
+    int letterPosition;
+
+public:
+    Location();
+    Location(const string& name, const string& desc);
+
+    void setClue(char letter, int pos);
+    char getHiddenLetter() const;
+    int getLetterPosition() const;
+
+    void displayDetails() const override;
+};
+
 #endif
