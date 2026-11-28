@@ -80,5 +80,19 @@ public:
 
     void displayDetails() const override;
 };
+class ClueNotebook {
+private:
+    char discoveredWord1[WORD1_LEN];
+    char discoveredWord2[WORD2_LEN];
+    int cluesFoundCount;
+
+public:
+    ClueNotebook();
+
+    void recordLocationClue(char letter, int position);
+    void recordCharacterClue(char letter, int position);
+    void displayNotebook() const;
+    int getCluesFoundCount() const;
+};
 
 #endif
