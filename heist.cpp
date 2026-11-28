@@ -62,3 +62,48 @@ void Suspect::displayDetails() const {
     }
     cout << endl;
 }
+ClueNotebook::ClueNotebook() : cluesFoundCount(0) {
+    for (int i = 0; i < WORD1_LEN; i++) discoveredWord1[i] = '_';
+    for (int i = 0; i < WORD2_LEN; i++) discoveredWord2[i] = '_';
+}
+
+void ClueNotebook::recordLocationClue(char letter, int position) {
+    if (position < 1 || position > WORD1_LEN) {
+        throw GameException("Invalid Word 1 letter position encountered!");
+    }
+    if (discoveredWord1[position - 1] == '_') {
+        discoveredWord1[position - 1] = letter;
+        cluesFoundCount++;
+    }
+}
+
+void ClueNotebook::recordCharacterClue(char letter, int position) {
+    if (position < 1 || position > WORD2_LEN) {
+        throw GameException("Invalid Word 2 letter position encountered!");
+    }
+    if (discoveredWord2[position - 1] == '_') {
+        discoveredWord2[position - 1] = letter;
+        cluesFoundCount++;
+    }
+}
+
+void ClueNotebook::displayNotebook() const {
+    cout << "\n================ DETECTIVE CLUE NOTEBOOK ================\n";
+    cout << "Word 1 (Locations - 7 Letters):  ";
+    for (int i = 0; i < WORD1_LEN; i++) {
+        cout << discoveredWord1[i] << " ";
+    }
+    cout << "\nPositions:                       1 2 3 4 5 6 7\n\n";
+
+    cout << "Word 2 (Characters - 8 Letters): ";
+    for (int i = 0; i < WORD2_LEN; i++) {
+        cout << discoveredWord2[i] << " ";
+    }
+    cout << "\nPositions:                       1 2 3 4 5 6 7 8\n";
+    cout << "Total Clues Collected: " << cluesFoundCount << " / 15\n";
+    cout << "=========================================================\n";
+}
+
+int ClueNotebook::getCluesFoundCount() const {
+    return cluesFoundCount;
+}
