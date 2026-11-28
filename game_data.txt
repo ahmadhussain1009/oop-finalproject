@@ -1,0 +1,148 @@
+
+# THE LOCKER HEIST - MASTER GAME DATA FILE
+
+
+[CHARACTERS]
+Detective|Arthur_Pendelton|British|Lead investigator assigned to the mansion locker heist.
+Business_Owner|Leonardo_deCaprio|Italian|Wealthy owner whose private vault locker was breached.
+Child|Lucas_deCaprio|Italian|Rebellious heir struggling with heavy gambling debts.
+PA|Elena_Vance|American|Personal assistant who manages all locker access schedules.
+Partner_1|Marcus_Sterling|Canadian|Senior business partner facing a hostile company audit.
+Partner_2|Victor_Moreau|French|Silent investor who recently demanded an emergency payout.
+Servant|Thomas_Wright|British|Long-time household butler with spare keys to every floor.
+Cook|Mateo_Rossi|Spanish|Head chef who prepared the late-night dinner before the heist.
+Guard|Ivan_Volkov|Russian|Head of estate security who disabled the midnight alarm.
+
+[LOCATIONS]
+Bedroom_1|Master suite belonging to Leonardo deCaprio with a wall safe.
+Bedroom_2|Guest wing bedroom overlooking the east courtyard.
+Study_Room|Private mahogany library containing ledgers and the breached locker.
+Garden|Moonlit botanical garden with fresh footprints near the hedge.
+Kitchen|Industrial estate kitchen stocked with imported spices and cutlery.
+Dining_Room|Grand banquet hall where everyone gathered before midnight.
+Living_Room|Main lounge featuring a fireplace and antique display cabinets.
+
+# Format per Culprit:
+# CULPRIT|<Role>|<Word1_7Letters>|<Word2_8Letters>
+# LOC|<LocationName>|<Letter>|<Position_1_to_7>
+# CHAR|<CharacterRole>|<Letter>|<Position_1_to_8>
+
+[CULPRITS]
+CULPRIT|Cook|POISONS|KITCHENS
+LOC|Bedroom_1|P|1
+LOC|Bedroom_2|O|2
+LOC|Study_Room|I|3
+LOC|Garden|S|4
+LOC|Kitchen|O|5
+LOC|Dining_Room|N|6
+LOC|Living_Room|S|7
+CHAR|Business_Owner|K|1
+CHAR|Cook|I|2
+CHAR|Guard|T|3
+CHAR|Servant|C|4
+CHAR|Child|H|5
+CHAR|Partner_1|E|6
+CHAR|Partner_2|N|7
+CHAR|PA|S|8
+
+CULPRIT|Guard|LOCKOUT|SECURITY
+LOC|Bedroom_1|L|1
+LOC|Bedroom_2|O|2
+LOC|Study_Room|C|3
+LOC|Garden|K|4
+LOC|Kitchen|O|5
+LOC|Dining_Room|U|6
+LOC|Living_Room|T|7
+CHAR|Business_Owner|S|1
+CHAR|Cook|E|2
+CHAR|Guard|C|3
+CHAR|Servant|U|4
+CHAR|Child|R|5
+CHAR|Partner_1|I|6
+CHAR|Partner_2|T|7
+CHAR|PA|Y|8
+
+CULPRIT|Servant|PASSKEY|STEALING
+LOC|Bedroom_1|P|1
+LOC|Bedroom_2|A|2
+LOC|Study_Room|S|3
+LOC|Garden|S|4
+LOC|Kitchen|K|5
+LOC|Dining_Room|E|6
+LOC|Living_Room|Y|7
+CHAR|Business_Owner|S|1
+CHAR|Cook|T|2
+CHAR|Guard|E|3
+CHAR|Servant|A|4
+CHAR|Child|L|5
+CHAR|Partner_1|I|6
+CHAR|Partner_2|N|7
+CHAR|PA|G|8
+
+CULPRIT|Child|DIAMOND|INHERITS
+LOC|Bedroom_1|D|1
+LOC|Bedroom_2|I|2
+LOC|Study_Room|A|3
+LOC|Garden|M|4
+LOC|Kitchen|O|5
+LOC|Dining_Room|N|6
+LOC|Living_Room|D|7
+CHAR|Business_Owner|I|1
+CHAR|Cook|N|2
+CHAR|Guard|H|3
+CHAR|Servant|E|4
+CHAR|Child|R|5
+CHAR|Partner_1|I|6
+CHAR|Partner_2|T|7
+CHAR|PA|S|8
+
+CULPRIT|Partner_1|BETRAYL|CONTRACT
+LOC|Bedroom_1|B|1
+LOC|Bedroom_2|E|2
+LOC|Study_Room|T|3
+LOC|Garden|R|4
+LOC|Kitchen|A|5
+LOC|Dining_Room|Y|6
+LOC|Living_Room|L|7
+CHAR|Business_Owner|C|1
+CHAR|Cook|O|2
+CHAR|Guard|N|3
+CHAR|Servant|T|4
+CHAR|Child|R|5
+CHAR|Partner_1|A|6
+CHAR|Partner_2|C|7
+CHAR|PA|T|8
+
+CULPRIT|Partner_2|PHANTOM|SABOTAGE
+LOC|Bedroom_1|P|1
+LOC|Bedroom_2|H|2
+LOC|Study_Room|A|3
+LOC|Garden|N|4
+LOC|Kitchen|T|5
+LOC|Dining_Room|O|6
+LOC|Living_Room|M|7
+CHAR|Business_Owner|S|1
+CHAR|Cook|A|2
+CHAR|Guard|B|3
+CHAR|Servant|O|4
+CHAR|Child|T|5
+CHAR|Partner_1|A|6
+CHAR|Partner_2|G|7
+CHAR|PA|E|8
+
+CULPRIT|PA|FORGERY|PASSWORD
+LOC|Bedroom_1|F|1
+LOC|Bedroom_2|O|2
+LOC|Study_Room|R|3
+LOC|Garden|G|4
+LOC|Kitchen|E|5
+LOC|Dining_Room|R|6
+LOC|Living_Room|Y|7
+CHAR|Business_Owner|P|1
+CHAR|Cook|A|2
+CHAR|Guard|S|3
+CHAR|Servant|S|4
+CHAR|Child|W|5
+CHAR|Partner_1|O|6
+CHAR|Partner_2|R|7
+CHAR|PA|D|8
